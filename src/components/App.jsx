@@ -2,8 +2,9 @@ import { useSelector } from 'react-redux';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactsList } from './ContactsList/ContactsList';
 import { Filter } from './Filter/Filter';
+import { getContacts } from 'redux/selectors';
 export const App = () => {
-  const contacts = useSelector(store => store.contacts);
+  const contacts = useSelector(getContacts);
   return (
     <div
       style={{
